@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="typing.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src='typing.js'></script>
-  <title>javascriptで簡単タイピングゲームを</title>
+  <title>RPGtyping</title>
   <style>
   </style>
 </head>
@@ -14,11 +14,12 @@
 <body>
   <label for="inputText">
   <div id = "game" class="text-containter">
-    <div class="question">
+    <div class="question" class="question-container">
       <span id="entered" class="marker"></span>
       <span id="remained"></span>
+      <span id="allQ" class="text-container"></span>
     </div>
-    <input type="text" class="text" id="inputText" autofocus>
+    <input type="text" class="text" id="inputText" autofocus autocomplete="off" writeonly>
   </div>
   </label> 
   <div id="message" class="text-container hidden">
