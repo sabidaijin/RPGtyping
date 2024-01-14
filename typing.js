@@ -7,17 +7,18 @@ window.onload = function(){
     "public",
     ".hidden {"
   ];
-  
+
+
   const setQuestion = (currentkey) => {
     let currenttext;
     currenttext = questions[currentkey];
     questions.splice(currentkey, 1);
     console.log(currenttext);
    
-    remained.textContent = currenttext + "\n";
+    remained.textContent = currenttext;
     remainedTextWords = [];
     remainedTextWords = currenttext.split('');
-    enteredTextWords = [];
+    
     
     inputText.value = '';
     setRemainingQuestions(questions);
@@ -25,10 +26,13 @@ window.onload = function(){
   };
   
   const setRemainingQuestions = (questions) => {
+    let questionText = ''; // 問題文を格納するための文字列
     for (let i = 0; i < questions.length; i++) {
-      allQ.textContent += questions[i] + "\n";
+      questionText += questions[i] + '<br>';
     }
+    allQ.innerHTML = questionText; // 問題文を表示する
   };
+  
 
   const entered = document.getElementById('entered');
   const remained = document.getElementById('remained');
@@ -39,7 +43,8 @@ window.onload = function(){
   const replayBtn = document.getElementById('replayBtn');
 
   let remainedTextWords = remained.textContent.split('');
-  let enteredTextWords = [];
+  // 入力済みのものをあえて残しておく
+  enteredTextWords = [];
   
   setQuestion(currentkey);
   

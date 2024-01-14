@@ -1,7 +1,72 @@
-/* カスタムスタイル */
+/*
+    html5doctor.com Reset Stylesheet
+    v1.6.1
+    Last Updated: 2010-09-17
+    Author: Richard Clark - http://richclarkdesign.com
+    Twitter: @rich_clark
+    */
+    html {
+        touch-action: manipulation;
+    }
+    html, body, div, span, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    abbr, address, cite, code,
+    del, dfn, em, img, ins, kbd, q, samp,
+    small, strong, sub, sup, var,
+    b, i,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section, summary,
+    time, mark, audio, video {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+    }
+    body {
+        line-height:1;
+    }
+    article,aside,details,figcaption,figure,
+    footer,header,hgroup,menu,nav,section {
+        display:block;
+    }
+    ul {
+        list-style:none;
+    }
+    blockquote, q {
+        quotes:none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content:'';
+        content:none;
+    }
+    a {
+        margin:0;
+        padding:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+    }
+    /* change colours to suit your needs */
+    ins {
+        background-color:#ff9;
+        color:#000;
+        text-decoration:none;
+    }
+    /* change colours to suit your needs */
+
+
+
+    /* グローバルスタイル */
 body {
     font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
-    background-color: #f5f5f5; /* 背景色を指定 */
+    background-color: #f5f5f5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,69 +74,66 @@ body {
     margin: 0;
 }
 
+/* テキストコンテナ */
 .text-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
+    max-width: 1200px; /* 最大幅を設定 */
+    margin: 0 auto; /* 中央寄せ */
 }
 
+/* 問題文 */
 .question {
-    font-size: 4rem; /* フォントサイズを指定 */
+    font-size: 4rem;
     font-weight: bold;
     letter-spacing: 0.1em;
-    text-align: left; /* 問題文を左寄せに設定 */
-    color: #333; /* テキストカラーを指定 */
-    width: 50%; /* 問題文の幅を指定 */
-    padding: 1rem; /* パディングを追加 */
-    position: fixed; /* 要素を固定位置に配置 */
-    left: 0; /* 左端に固定 */
-    top: 0; /* 上端に固定（必要に応じて調整） */
+    text-align: left;
+    color: #333;
+    width: 50%;
+    padding: 1rem;
+    position: fixed; /* 固定位置を外す */
+    left: 0; /* 左端に固定を外す */
+    top: 0; /* 上端に固定を外す */
 }
 
+/* マーカー */
 .marker {
     color: #a4aaab;
 }
 
+/* テキスト */
 .text {
-    width: 50%; /* テキスト入力欄の幅を指定 */
-    border: 2px solid #ccc; /* ボーダーを追加 */
-    margin-top: 2rem;
-    font-size: 1.5rem; /* フォントサイズを指定 */
-    letter-spacing: 0.1em;
-    text-align: center;
-    padding: 1rem; /* パディングを追加 */
+    display: none;
 }
 
-.text:focus, .text:focus-visible {
-    border: 2px solid #007bff; /* フォーカス時のボーダーを指定 */
-    outline: none;
-}
-
+/* メッセージ */
 .message {
     margin-top: 2rem;
-    font-size: 1.2rem; /* フォントサイズを指定 */
+    font-size: 1.2rem;
     text-align: center;
-    color: #ff0000; /* メッセージのテキストカラーを指定 */
+    color: #ff0000;
 }
 
+/* ボタン */
 .button {
-    margin-top: 1rem;
-    font-size: 1rem;
+    margin-top: 10rem;
+    font-size: 10rem;
     cursor: pointer;
-    background-color: #007bff; /* ボタンの背景色を指定 */
-    color: #fff; /* ボタンのテキストカラーを指定 */
+    background-color: #193f69;
+    color: #fff;
     border: none;
-    padding: 0.5rem 1rem; /* パディングを追加 */
-    border-radius: 4px; /* ボーダーの角丸を指定 */
-    transition: background-color 0.2s ease; /* ホバー時のトランジションを追加 */
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
 }
 
 .button:hover {
-    background-color: #0056b3; /* ホバー時の背景色を指定 */
+    background-color: #0056b3;
 }
 
-/* これがついたり外れたりすると画面が消えたりついたりする */
+/* 要素を非表示にするクラス */
 .hidden {
     display: none;
 }
