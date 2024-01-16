@@ -3,11 +3,9 @@
 window.onload = function(){
   let currentkey = 0;
   const questions = [
-    "const greeting: string = 'Hello';",
-    "const target: string = 'world!';",
-    "console.log(greeting + target);"
+    "aiueo"
   ];
-
+ "一度コミットしてみる"
 
   const setQuestion = (currentkey) => {
     let currenttext;
@@ -19,7 +17,10 @@ window.onload = function(){
 
     remainedTextWords = [];
     remainedTextWords = currenttext.split('');
-    
+    remainedTextWords.forEach(character => {
+      const characterSpan = document.createElement('span');
+      characterSpan.innerText = character;
+    });
     
     inputText.value = '';
     setRemainingQuestions(questions);
@@ -94,47 +95,47 @@ window.onload = function(){
 
 
 // ここからthree.jsのコード
-// Path: three.js
-/* 'use strict' */
-let camera, scene, renderer, cube;// カメラ、シーン、レンダラー、立方体
+// // Path: three.js
+// /* 'use strict' */
+// let camera, scene, renderer, cube;// カメラ、シーン、レンダラー、立方体
 
 
 
-// 3Dコンテンツのセットアップ
-function setup3DContent() {
-    camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 1000);
-    camera.position.set(0, 0, 600);
+// // 3Dコンテンツのセットアップ
+// function setup3DContent() {
+//     camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 1000);
+//     camera.position.set(0, 0, 600);
 
-    scene = new THREE.Scene();
+//     scene = new THREE.Scene();
 
-    let dirLight = new THREE.DirectionalLight(0xffffff, 1);
-    dirLight.position.set(5, 3, 5);
-    scene.add(dirLight);
+//     let dirLight = new THREE.DirectionalLight(0xffffff, 1);
+//     dirLight.position.set(5, 3, 5);
+//     scene.add(dirLight);
 
-    let ambLight = new THREE.AmbientLight(0x333333);
-    scene.add(ambLight);
+//     let ambLight = new THREE.AmbientLight(0x333333);
+//     scene.add(ambLight);
 
-    renderer = new THREE.WebGLRenderer({ alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.getElementById('three').appendChild(renderer.domElement);
+//     renderer = new THREE.WebGLRenderer({ alpha: true });
+//     renderer.setSize(window.innerWidth, window.innerHeight);
+//     document.getElementById('three').appendChild(renderer.domElement);
 
-    let geometry = new THREE.BoxGeometry(200, 200, 200);
-    let material = new THREE.MeshLambertMaterial({ color: 0x00ddff });
-    cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
-}
+//     let geometry = new THREE.BoxGeometry(200, 200, 200);
+//     let material = new THREE.MeshLambertMaterial({ color: 0x00ddff });
+//     cube = new THREE.Mesh(geometry, material);
+//     scene.add(cube);
+// }
 
-// アニメーションループ
-function animate() {
-    cube.rotation.x += 0.002;
-    cube.rotation.y += 0.002;
-    cube.rotation.z += 0.002;
+// // アニメーションループ
+// function animate() {
+//     cube.rotation.x += 0.002;
+//     cube.rotation.y += 0.002;
+//     cube.rotation.z += 0.002;
 
-    renderer.render(scene, camera);
-    requestAnimationFrame(animate);
-}
+//     renderer.render(scene, camera);
+//     requestAnimationFrame(animate);
+// }
 
-window.onload = () => {
-    setup3DContent();
-    animate();
-};
+// window.onload = () => {
+//     setup3DContent();
+//     animate();
+// };
