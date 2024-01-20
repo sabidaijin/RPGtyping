@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="p.png" rel="icon">
+  <link href="game.css" rel="stylesheet" type="text/css">
+  <script type="module" src="game.js" defer></script>
+  <title>RPGtyping</title>
+</head>
+
+<body class="body">
+  <div id ="stageContent" class="stageContent"></div>
+  <div id="game" class="text-container">
+    <div id="remained" class="question-text"></div>
+    <input type="text" class="text" id="inputText" autofocus autocomplete="off">
+  </div>
+
+  <div id="message" class="text-container hidden">
+    <div class="message">
+      ゲームクリア！お疲れ様でした！<br>
+      <button class= "button" onclick="backToBeforeStage()">前のステージへ</button>
+      <button id="replayBtn" class="button">もう一度プレイする？</button>
+      <button class= "button" onclick="goToNextStage()">次のステージへ</button>
+      <button id="backBtn" class="button" onclick="window.location.href = 'menu.html'">メニューに戻る</button>
+    </div>
+  </div>
+</body>
+
+</html>

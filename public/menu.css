@@ -1,0 +1,103 @@
+/*
+    html5doctor.com Reset Stylesheet
+    v1.6.1
+    Last Updated: 2010-09-17
+    Author: Richard Clark - http://richclarkdesign.com
+    Twitter: @rich_clark
+    */
+    html {
+        touch-action: manipulation;
+    }
+    html, body, div, span, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    abbr, address, cite, code,
+    del, dfn, em, img, ins, kbd, q, samp,
+    small, strong, sub, sup, var,
+    b, i,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section, summary,
+    time, mark, audio, video {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+    }
+    body {
+        line-height:1;
+    }
+    article,aside,details,figcaption,figure,
+    footer,header,hgroup,menu,nav,section {
+        display:block;
+    }
+    ul {
+        list-style:none;
+    }
+    blockquote, q {
+        quotes:none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content:'';
+        content:none;
+    }
+    a {
+        margin:0;
+        padding:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+    }
+    /* change colours to suit your needs */
+    ins {
+        background-color:#ff9;
+        color:#000;
+        text-decoration:none;
+    }
+    /* change colours to suit your needs */
+
+/* ボタンのスタイル */
+
+.body{
+    background-color: #000000;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* ボタン間のスペース */
+}
+
+/* 全てのステージボタンに共通のスタイル */
+.stage-btn {
+    background-color: #555; /* ダークグレーの背景 */
+    color: #fff; /* 白色のテキスト */
+    border: none;
+    border-radius: 5px; /* 角を丸める */
+    padding: 10px 20px;
+
+    font-size: 16px;
+    text-transform: uppercase; /* テキストを大文字に */
+    cursor: pointer; /* カーソルをポインターに */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 影をつける */
+    transition: transform 0.2s, box-shadow 0.2s; /* アニメーション効果 */
+}
+
+/* ホバー時のスタイル */
+.stage-btn:hover {
+    transform: translateY(-3px); /* 軽く持ち上げる */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* 影を強調 */
+}
+
+/* アクティブ（クリック）時のスタイル */
+.stage-btn:active {
+    transform: translateY(-1px); /* 元に戻す */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5); /* 影を弱める */
+}
+
