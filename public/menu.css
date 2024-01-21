@@ -66,7 +66,6 @@
 .body{
     background-color: #000000;
 }
-
 .button {
     display: flex;
     flex-direction: column;
@@ -74,6 +73,38 @@
     gap: 10px; /* ボタン間のスペース */
 }
 
+.button button {
+    width: 400px; /* ボタンの幅を設定 */
+    height: 100px; /* ボタンの高さを設定 */
+}
+
+.gif {
+    margin: 10;
+    width: 100%;
+    height: 100%;
+  
+    
+}
+.hero img {
+    position: absolute;
+    width: 50%; /* 幅を50%に設定 */
+    height: auto; /* 高さを自動調整してアスペクト比を保つ */
+    z-index: 2; /* グラフィックの重なり順序を調整 (必要に応じて) */
+    left: 0; /* 画像を左側に配置 */
+    bottom: 200px; /* 下からの位置を調整 */
+}
+
+.board img {
+    position: absolute; 
+    width: 20%; /* 幅を50%に設定 */
+    height: auto; /* 高さを自動調整してアスペクト比を保つ */
+    z-index: 2; /* グラフィックの重なり順序を調整 (必要に応じて) */
+    right: 210px; /* 画像を右側に配置 */
+    bottom: 330px; /* 下からの位置を調整 */
+}
+
+
+ 
 /* 全てのステージボタンに共通のスタイル */
 .stage-btn {
     background-color: #555; /* ダークグレーの背景 */

@@ -4,28 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="p.png" rel="icon">
+
+  <link href="images/p.png" rel="icon">
   <link href="game.css" rel="stylesheet" type="text/css">
   <script type="module" src="game.js" defer></script>
   <title>RPGtyping</title>
 </head>
 
-<body class="body">
-  <div id ="stageContent" class="stageContent"></div>
-  <div id="game" class="text-container">
+<body>
+  <header id="stageContent">
+
+  </header>
+  <div id="game" class="textbox">
     <div id="remained" class="question-text"></div>
     <input type="text" class="text" id="inputText" autofocus autocomplete="off">
+    <div class="gif">
+      <div class="hero">
+        <img src="images/herorun.gif" alt="hero_run">
+      <div class="粉雪">
+        <img src="images/粉雪.gif" alt="粉雪">
+      </div>
+    </div>
+      <div class="Tree">
+        <img id="Tree0"src="images/tree_snow_0.png" alt="tree">
+        <img id="Tree1"src="images/tree_snow_0.png" alt="tree">
+        </div>
+        <div class="House">
+        <img id="House0"src="images/house.png" alt="House">
+        <img id="House1"src="images/house.png" alt="House0">
+      </div>
   </div>
-
+  
   <div id="message" class="text-container hidden">
-    <div class="message">
-      ゲームクリア！お疲れ様でした！<br>
-      <button class= "button" onclick="backToBeforeStage()">前のステージへ</button>
+    <div class="message">ゲームクリア！お疲れ様でした！<br>
+      <button class="button" onclick="backToBeforeStage()">前のステージへ</button>
       <button id="replayBtn" class="button">もう一度プレイする？</button>
-      <button class= "button" onclick="goToNextStage()">次のステージへ</button>
+      <button class="button" onclick="goToNextStage()">次のステージへ</button>
       <button id="backBtn" class="button" onclick="window.location.href = 'menu.html'">メニューに戻る</button>
     </div>
   </div>
+  <audio src="audio/stage1.mp3" class="music" value="0.5" autoplay loop></audio>
 </body>
 
 </html>

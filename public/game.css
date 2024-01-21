@@ -64,7 +64,7 @@
 
 
     /* グローバルスタイル */
-.body {
+body {
     font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
     background-color: #000000;
     display: flex;
@@ -74,26 +74,92 @@
     margin: 0;
     
 }
-.stageContent {
-    font-size: 5rem;
-    position: absolute;
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #7c7878;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 10;
+    font-size: 4rem;
     top: 0;
     left: 0;
     color: rgb(255, 255, 255); /* 黒いテキストカラーを設定 */
     padding: 20px; /* 内側の余白を追加（任意の値に調整） */
+    width: 100%; /* 横幅を100%に指定 */}
 
-}
-
-.text-container {
+.textbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap; /* 改行の設定 */
-    justify-content: space-between;
-    width: 80%;
-    margin:  auto; /* 中央寄せ */
-   
+    align-items: center;
+    justify-content: center;
 }
-
-
+/* 戻るボタンが出ない */
+text-container {  
+        position: fixed;
+        width: 100%;
+    }
+    
+/* 要素を非表示にするクラス */
+.hidden {
+    display: none;
+}
+.gif {
+    margin: 10;
+    width: 100%;
+    height: 100%;
+    
+}
+.hero img {
+    position: absolute;
+    width: 50%; /* 幅を50%に設定 */
+    height: auto; /* 高さを自動調整してアスペクト比を保つ */
+    z-index: 2; /* グラフィックの重なり順序を調整 (必要に応じて) */
+    right: 100; /* 画像を左側に配置 */
+    bottom: 10px; /* 下からの位置を調整 */
+}
+.粉雪 img {
+    position: absolute;
+    width: 50%; /* 幅を50%に設定 */
+    height: auto; /* 高さを自動調整してアスペクト比を保つ */
+    z-index: 1; /* グラフィックの重なり順序を調整 (必要に応じて) */
+    right: 100; /* 画像を左側に配置 */
+    bottom: 10px; /* 下からの位置を調整 */
+}
+.Tree img{
+    display: none;
+    position: absolute;
+    width: 10%; /* 幅を50%に設定 */
+    height: auto; /* 高さを自動調整してアスペクト比を保つ */
+    z-index: 1; /* グラフィックの重なり順序を調整 (必要に応じて) */
+    right: 0; /* 画像を左側に配置 */
+    bottom: 140px; /* 下からの位置を調整 */
+}
+.House img{
+    display: none;
+    position: absolute;
+    width: 10%; /* 幅を50%に設定 */
+    height: auto; /* 高さを自動調整してアスペクト比を保つ */
+    z-index: 1; /* グラフィックの重なり順序を調整 (必要に応じて) */
+    right: 0; /* 画像を左側に配置 */
+    bottom: 140px; /* 下からの位置を調整 */
+}
+.question-text {
+    font-size: 2rem; /* フォントサイズを調整 */
+    width: 70%; /* 幅を調整 */
+    max-height: 1000px; /* 最大高さを指定し、必要に応じてスクロールバーを表示 */
+    overflow-y: scroll; /* スクロールバーを表示 */
+}
 /* テキスト */
 .text {
     display: none;
@@ -124,31 +190,29 @@
     background-color: #0056b3;
 }
 
-/* 要素を非表示にするクラス */
-.hidden {
-    display: none;
-}
+
 
 /* 正解か不正解かで色を変えるクラス */
 .correct{
     color: #b6bab6;
-    font-size: 4rem;
-    font-weight: bold;
+
 }
 .incorrect{
     color: #ff0000;
-    font-size: 4rem;
-    font-weight: bold;
+
+
+
 }
 
 .yet{
     color: #ffffff;
-    font-size: 4rem;
-    font-weight: bold;
+  
+    
+
 
 }
 /* 空白文字のスタイリング */
 .tab {
     display: inline-block;
-    font-size: 4rem;
+    font-size: 3rem;
 }
